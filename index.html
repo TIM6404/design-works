@@ -286,10 +286,30 @@
     footer p { color: #888; font-size: 0.85rem; margin: 0; }
 
     @media(max-width: 600px) {
-      .nav-links { display: none; }
-      section { padding: 3rem 20px; }
-      h2 { font-size: 1.5rem; }
-    }
+  /* 將原本的左右排列改為上下置中排列 */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+  
+  /* 讓導覽連結自動換行，並調整間距 */
+  .nav-links { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* 取消大螢幕時設定的左側邊距 */
+  .nav-links a { 
+    margin-left: 0; 
+    font-size: 0.95rem;
+  }
+  
+  section { padding: 3rem 20px; }
+  h2 { font-size: 1.5rem; }
+}
 
     /* =========================================
        新增：彈出視窗 (Modal) CSS 樣式
