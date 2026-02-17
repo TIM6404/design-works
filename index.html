@@ -453,7 +453,7 @@
       <button class="filter-btn" onclick="filterProjects('graphic')">空間設計</button>
       <button class="filter-btn" onclick="filterProjects('web')">網頁設計</button>
       <button class="filter-btn" onclick="filterProjects('3d')">3D 模型</button>
-      <button class="filter-btn" onclick="filterProjects('arvr')">AR/VR 體驗</button>
+      <button class="filter-btn" onclick="filterProjects('ar,vr')">AR/VR 體驗</button>
     </div>
 
     <div class="portfolio-grid" id="portfolio-container">
@@ -622,7 +622,7 @@
       
       const filteredData = filter === 'all' 
         ? projectsData 
-        : projectsData.filter(item => item.category === filter);
+        : projectsData.filter(item => item.category.includes(filter));
 
       if(filteredData.length === 0) {
         container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #999;">目前沒有此分類的作品。</div>`;
@@ -634,7 +634,7 @@
         if(project.category === 'graphic') catName = "平面設計";
         if(project.category === '3d') catName = "3D 模型";
         if(project.category === 'web') catName = "網頁設計";
-        if(project.category === 'arvr') catName = "AR/VR 體驗";
+        if(project.category === 'ar,vr') catName = "AR/VR 體驗";
 
         const toolsHtml = project.tools 
           ? `<div class="tools-list">${project.tools.map(t => `<span class="tool-tag">#${t}</span>`).join('')}</div>`
