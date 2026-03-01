@@ -286,30 +286,46 @@
     footer p { color: #888; font-size: 0.85rem; margin: 0; }
 
     @media(max-width: 600px) {
-  /* 將原本的左右排列改為上下置中排列 */
-  nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-  }
-  
-  /* 讓導覽連結自動換行，並調整間距 */
-  .nav-links { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  /* 取消大螢幕時設定的左側邊距 */
-  .nav-links a { 
-    margin-left: 0; 
-    font-size: 0.95rem;
-  }
-  
-  section { padding: 3rem 20px; }
-  h2 { font-size: 1.5rem; }
-}
+      nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+      }
+      
+      .nav-links { 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+      }
+      
+      .nav-links a { 
+        margin-left: 0; 
+        font-size: 0.95rem;
+      }
+      
+      section { padding: 3rem 20px; }
+      h2 { font-size: 1.5rem; }
+
+      /* ====== 新增：彈窗與更多圖片優化 ====== */
+      /* 優化彈窗在手機版的留白 */
+      .modal-body, .modal-header {
+        padding: 15px; 
+      }
+
+      /* 讓手機版圖片可以並排或優雅單排 */
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+      }
+
+      /* 取消固定高度，改用自適應 4:3 比例，確保畫面不裁切變形 */
+      .gallery-img {
+        height: auto;           
+        aspect-ratio: 4 / 3;    
+        object-fit: cover;      
+      }
+    }
 
     /* =========================================
        新增：彈出視窗 (Modal) CSS 樣式
