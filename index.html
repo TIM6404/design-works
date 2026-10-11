@@ -452,8 +452,8 @@
     </div>
     
     <div class="about-desc">
-      <p>嗨，我是 Tim。一名跨領域設計師與技術整合者。</p>
-      <p>專注於將內涵與美感加科技（如 AR/VR）結合，為商業設計提供優雅且具高效益的解決方案。也擅長透過新技術推動數據的設計管理，能貢獻商業及社會最佳的使用者體驗。</p>
+      <p>你好、我是 Tim。一名跨領域設計整合者。</p>
+      <p>長期於連鎖企業擔任空間工程設計(室內裝修)，亦有#AI應用規劃#、#淨零碳排#、#室內裝修工程管理#證照，專注於空間與美感加科技結合，透過自身技術推動設計管理及使用者體驗、高效益的整合方案、創造優雅社會環境。</p>
     </div>
 
     <a href="https://www.linkedin.com/in/tim6404-40866616a/" target="_blank" class="btn-linkedin">
@@ -469,7 +469,7 @@
       <button class="filter-btn" onclick="filterProjects('graphic')">空間設計</button>
       <button class="filter-btn" onclick="filterProjects('web')">網頁設計</button>
       <button class="filter-btn" onclick="filterProjects('3d')">3D 模型</button>
-      <button class="filter-btn" onclick="filterProjects('ar,vr')">AR/VR 體驗</button>
+      <button class="filter-btn" onclick="filterProjects('ar,vr')">圖片比對系統</button>
     </div>
 
     <div class="portfolio-grid" id="portfolio-container">
@@ -613,14 +613,14 @@
       },
       {
         id: 7,
-        title: "沉浸式房地產賞屋 VR",
-        category: "arvr",
-        date: "2025.11",
-        tools: ["Unreal Engine", "VR", "Oculus"],
-        description: "為建設公司開發的 VR 賞屋系統，讓客戶在建案完工前即可身歷其境體驗室內空間感。",
-        image: "https://via.placeholder.com/600x400/e0e0e0/888888?text=VR+Tour",
-        link: "#",
-        content: "使用 Unreal Engine 5 的 Lumen 技術，實現即時光線追蹤效果。",
+        title: "圖片比對系統 ",
+        category: "ar,vr,Computer Vision, OpenCV", // 修正：加入 'ar,vr' 以匹配按鈕篩選條件
+        date: "2026.09",
+        tools: ["AI"],
+        description: "採用的是傳統的**電腦視覺（Computer Vision, OpenCV）演算法（例如透過 ORB/SIFT 進行特徵點對齊、以 cv2.absdiff 或 SSIM 比對像素差異，並搭配 Otsu 法進行二值化過濾微小邊緣雜訊）執行過程。",
+        image: "images/work8.jpg", // 修正：拿掉多餘的 'h'
+        link: "https://lnkd.in/gkEMsh6x", // 修正：移除逗號與第二個網址，避免 Syntax Error
+        content: "幾秒鐘就能精準完成2張圖比對！",
         moreImages: []
       }
     ];
